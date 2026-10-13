@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>Example.Empty</title><link rel="stylesheet" href="Agda.css"></head><body><pre class="Agda">
+
+<a id="3" class="Keyword">open</a> <a id="8" class="Keyword">import</a> <a id="15" href="Prelude.html" class="Module">Prelude</a>
+
+<a id="24" class="Keyword">module</a> <a id="31" href="Example.Empty.html" class="Module">Example.Empty</a> <a id="45" class="Keyword">where</a>
+
+<a id="52" class="Keyword">open</a> <a id="57" class="Keyword">import</a> <a id="64" href="Model.Prop.CwF.html" class="Module">Model.Prop.CwF</a>
+<a id="79" class="Keyword">open</a> <a id="84" class="Keyword">import</a> <a id="91" href="Model.Prop.Empty.Core.html" class="Module">Model.Prop.Empty.Core</a>
+<a id="113" class="Keyword">open</a> <a id="118" class="Keyword">import</a> <a id="125" href="Model.Prop.Empty.Elim.html" class="Module">Model.Prop.Empty.Elim</a>
+<a id="147" class="Keyword">open</a> <a id="152" class="Keyword">import</a> <a id="159" href="Model.Prop.Empty.Derived.html" class="Module">Model.Prop.Empty.Derived</a>
+<a id="184" class="Keyword">open</a> <a id="189" class="Keyword">import</a> <a id="196" href="Model.Prop.Unit.html" class="Module">Model.Prop.Unit</a>
+
+<a id="empty-to-unit"></a><a id="213" href="Example.Empty.html#213" class="Function">empty-to-unit</a> <a id="227" class="Symbol">:</a> <a id="229" class="Symbol">∀</a> <a id="231" class="Symbol">{</a><a id="232" href="Example.Empty.html#232" class="Bound">ℓE</a> <a id="235" href="Example.Empty.html#235" class="Bound">ℓU</a><a id="237" class="Symbol">}</a> <a id="239" class="Symbol">→</a> <a id="241" href="Model.Prop.CwF.Core.html#2177" class="Record">Tm</a> <a id="244" href="Model.Prop.CwF.Core.html#474" class="Generalizable">Γ</a> <a id="246" class="Symbol">(</a><a id="247" href="Model.Prop.Empty.Core.html#86" class="Function">Empty</a> <a id="253" class="Symbol">{</a><a id="254" class="Argument">ℓE</a> <a id="257" class="Symbol">=</a> <a id="259" href="Example.Empty.html#232" class="Bound">ℓE</a><a id="261" class="Symbol">})</a> <a id="264" class="Symbol">→</a> <a id="266" href="Model.Prop.CwF.Core.html#2177" class="Record">Tm</a> <a id="269" href="Model.Prop.CwF.Core.html#474" class="Generalizable">Γ</a> <a id="271" class="Symbol">(</a><a id="272" href="Model.Prop.Unit.Core.html#87" class="Function">Unit</a> <a id="277" class="Symbol">{</a><a id="278" class="Argument">ℓ</a> <a id="280" class="Symbol">=</a> <a id="282" href="Example.Empty.html#235" class="Bound">ℓU</a><a id="284" class="Symbol">})</a>
+<a id="287" href="Example.Empty.html#213" class="Function">empty-to-unit</a> <a id="301" class="Symbol">=</a> <a id="303" href="Model.Prop.Empty.Derived.html#159" class="Function">absurd</a> <a id="310" href="Model.Prop.Unit.Core.html#87" class="Function">Unit</a>
+</pre></body></html>

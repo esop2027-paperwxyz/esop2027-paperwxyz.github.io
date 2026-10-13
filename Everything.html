@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>Everything</title><link rel="stylesheet" href="Agda.css"></head><body><pre class="Agda"><a id="1" class="Keyword">module</a> <a id="8" href="Everything.html" class="Module">Everything</a> <a id="19" class="Keyword">where</a>
+
+<a id="26" class="Comment">-- Note: we do not include</a>
+<a id="53" class="Comment">--   import Example</a>
+<a id="73" class="Comment">-- because one of the example uses strong-J, which requires --rewriting</a>
+
+<a id="146" class="Keyword">import</a> <a id="153" href="Prelude.html" class="Module">Prelude</a>
+<a id="161" class="Keyword">import</a> <a id="168" href="Model.Prop.Unit.Elim.html" class="Module">Model.Prop.Unit.Elim</a>
+<a id="189" class="Keyword">import</a> <a id="196" href="Model.Prop.Unit.Derived.html" class="Module">Model.Prop.Unit.Derived</a>
+<a id="220" class="Keyword">import</a> <a id="227" href="Model.Prop.Unit.Rules.html" class="Module">Model.Prop.Unit.Rules</a>
+<a id="249" class="Keyword">import</a> <a id="256" href="Model.Prop.Unit.Core.html" class="Module">Model.Prop.Unit.Core</a>
+<a id="277" class="Keyword">import</a> <a id="284" href="Model.Prop.HEq.Elim.html" class="Module">Model.Prop.HEq.Elim</a>
+<a id="304" class="Keyword">import</a> <a id="311" href="Model.Prop.HEq.Example.html" class="Module">Model.Prop.HEq.Example</a>
+<a id="334" class="Keyword">import</a> <a id="341" href="Model.Prop.HEq.Derived.html" class="Module">Model.Prop.HEq.Derived</a>
+<a id="364" class="Keyword">import</a> <a id="371" href="Model.Prop.HEq.Rules.html" class="Module">Model.Prop.HEq.Rules</a>
+<a id="392" class="Keyword">import</a> <a id="399" href="Model.Prop.HEq.Core.html" class="Module">Model.Prop.HEq.Core</a>
+<a id="419" class="Keyword">import</a> <a id="426" href="Model.Prop.Empty.Elim.html" class="Module">Model.Prop.Empty.Elim</a>
+<a id="448" class="Keyword">import</a> <a id="455" href="Model.Prop.Empty.Derived.html" class="Module">Model.Prop.Empty.Derived</a>
+<a id="480" class="Keyword">import</a> <a id="487" href="Model.Prop.Empty.Rules.html" class="Module">Model.Prop.Empty.Rules</a>
+<a id="510" class="Keyword">import</a> <a id="517" href="Model.Prop.Empty.Core.html" class="Module">Model.Prop.Empty.Core</a>
+<a id="539" class="Keyword">import</a> <a id="546" href="Model.Prop.Empty.html" class="Module">Model.Prop.Empty</a>
+<a id="563" class="Keyword">import</a> <a id="570" href="Model.Prop.HEq.html" class="Module">Model.Prop.HEq</a>
+<a id="585" class="Keyword">import</a> <a id="592" href="Model.Prop.Desc.Elim.html" class="Module">Model.Prop.Desc.Elim</a>
+<a id="613" class="Keyword">import</a> <a id="620" href="Model.Prop.Desc.Rec.html" class="Module">Model.Prop.Desc.Rec</a>
+<a id="640" class="Keyword">import</a> <a id="647" href="Model.Prop.Desc.Rules.html" class="Module">Model.Prop.Desc.Rules</a>
+<a id="669" class="Keyword">import</a> <a id="676" href="Model.Prop.Desc.Core.html" class="Module">Model.Prop.Desc.Core</a>
+<a id="697" class="Keyword">import</a> <a id="704" href="Model.Prop.Desc.Arg.html" class="Module">Model.Prop.Desc.Arg</a>
+<a id="724" class="Keyword">import</a> <a id="731" href="Model.Prop.Desc.IH.html" class="Module">Model.Prop.Desc.IH</a>
+<a id="750" class="Keyword">import</a> <a id="757" href="Model.Prop.Desc.html" class="Module">Model.Prop.Desc</a>
+<a id="773" class="Keyword">import</a> <a id="780" href="Model.Prop.Desc-IR.Core.html" class="Module">Model.Prop.Desc-IR.Core</a>
+<a id="804" class="Keyword">import</a> <a id="811" href="Model.Prop.Desc-IR.Elim.html" class="Module">Model.Prop.Desc-IR.Elim</a>
+<a id="835" class="Keyword">import</a> <a id="842" href="Model.Prop.Desc-IR.Rules.html" class="Module">Model.Prop.Desc-IR.Rules</a>
+<a id="867" class="Keyword">import</a> <a id="874" href="Model.Prop.Desc-IR.html" class="Module">Model.Prop.Desc-IR</a>
+<a id="893" class="Keyword">import</a> <a id="900" href="Model.Prop.CwF.Core.html" class="Module">Model.Prop.CwF.Core</a>
+<a id="920" class="Keyword">import</a> <a id="927" href="Model.Prop.CwF.Prop.html" class="Module">Model.Prop.CwF.Prop</a>
+<a id="947" class="Keyword">import</a> <a id="954" href="Model.Prop.IF.Bool.html" class="Module">Model.Prop.IF.Bool</a>
+<a id="973" class="Keyword">import</a> <a id="980" href="Model.Prop.IF.InfTree.html" class="Module">Model.Prop.IF.InfTree</a>
+<a id="1002" class="Keyword">import</a> <a id="1009" href="Model.Prop.IF.Nat.Elim.html" class="Module">Model.Prop.IF.Nat.Elim</a>
+<a id="1032" class="Keyword">import</a> <a id="1039" href="Model.Prop.IF.Nat.Derived.html" class="Module">Model.Prop.IF.Nat.Derived</a>
+<a id="1065" class="Keyword">import</a> <a id="1072" href="Model.Prop.IF.Nat.Rules.html" class="Module">Model.Prop.IF.Nat.Rules</a>
+<a id="1096" class="Keyword">import</a> <a id="1103" href="Model.Prop.IF.Nat.Core.html" class="Module">Model.Prop.IF.Nat.Core</a>
+<a id="1126" class="Keyword">import</a> <a id="1133" href="Model.Prop.IF.Nat.html" class="Module">Model.Prop.IF.Nat</a>
+<a id="1151" class="Comment">-- import Model.Prop.Meta.CountableChoice -- gone?</a>
+<a id="1202" class="Keyword">import</a> <a id="1209" href="Model.Prop.Meta.UniqueChoice.html" class="Module">Model.Prop.Meta.UniqueChoice</a>
+<a id="1238" class="Keyword">import</a> <a id="1245" href="Model.Prop.Meta.Consistency.html" class="Module">Model.Prop.Meta.Consistency</a>
+<a id="1273" class="Keyword">import</a> <a id="1280" href="Model.Prop.Meta.Extensionality.html" class="Module">Model.Prop.Meta.Extensionality</a>
+<a id="1311" class="Keyword">import</a> <a id="1318" href="Model.Prop.Meta.Regularity.Core.html" class="Module">Model.Prop.Meta.Regularity.Core</a>
+<a id="1350" class="Keyword">import</a> <a id="1357" href="Model.Prop.Meta.Regularity.Extra.html" class="Module">Model.Prop.Meta.Regularity.Extra</a>
+<a id="1390" class="Keyword">import</a> <a id="1397" href="Model.Prop.Meta.Regularity.Desc.html" class="Module">Model.Prop.Meta.Regularity.Desc</a>
+<a id="1429" class="Keyword">import</a> <a id="1436" href="Model.Prop.Meta.Regularity.Desc-IR.html" class="Module">Model.Prop.Meta.Regularity.Desc-IR</a>
+<a id="1471" class="Keyword">import</a> <a id="1478" href="Model.Prop.Product.Elim.html" class="Module">Model.Prop.Product.Elim</a>
+<a id="1502" class="Keyword">import</a> <a id="1509" href="Model.Prop.Product.Derived.html" class="Module">Model.Prop.Product.Derived</a>
+<a id="1536" class="Keyword">import</a> <a id="1543" href="Model.Prop.Product.Rules.html" class="Module">Model.Prop.Product.Rules</a>
+<a id="1568" class="Keyword">import</a> <a id="1575" href="Model.Prop.Product.Core.html" class="Module">Model.Prop.Product.Core</a>
+<a id="1599" class="Keyword">import</a> <a id="1606" href="Model.Prop.Pi.Elim.html" class="Module">Model.Prop.Pi.Elim</a>
+<a id="1625" class="Keyword">import</a> <a id="1632" href="Model.Prop.Pi.Derived.html" class="Module">Model.Prop.Pi.Derived</a>
+<a id="1654" class="Keyword">import</a> <a id="1661" href="Model.Prop.Pi.Rules.html" class="Module">Model.Prop.Pi.Rules</a>
+<a id="1681" class="Keyword">import</a> <a id="1688" href="Model.Prop.Pi.Core.html" class="Module">Model.Prop.Pi.Core</a>
+<a id="1707" class="Keyword">import</a> <a id="1714" href="Model.Prop.Sum.Elim.html" class="Module">Model.Prop.Sum.Elim</a>
+<a id="1734" class="Keyword">import</a> <a id="1741" href="Model.Prop.Sum.Derived.html" class="Module">Model.Prop.Sum.Derived</a>
+<a id="1764" class="Keyword">import</a> <a id="1771" href="Model.Prop.Sum.Rules.html" class="Module">Model.Prop.Sum.Rules</a>
+<a id="1792" class="Keyword">import</a> <a id="1799" href="Model.Prop.Sum.Core.html" class="Module">Model.Prop.Sum.Core</a>
+<a id="1819" class="Keyword">import</a> <a id="1826" href="Model.Prop.Sum.html" class="Module">Model.Prop.Sum</a>
+<a id="1841" class="Keyword">import</a> <a id="1848" href="Model.Prop.CwF.html" class="Module">Model.Prop.CwF</a>
+<a id="1863" class="Keyword">import</a> <a id="1870" href="Model.Prop.Pi.html" class="Module">Model.Prop.Pi</a>
+<a id="1884" class="Keyword">import</a> <a id="1891" href="Model.Prop.Meta.html" class="Module">Model.Prop.Meta</a>
+<a id="1907" class="Keyword">import</a> <a id="1914" href="Model.Prop.Unit.html" class="Module">Model.Prop.Unit</a>
+<a id="1930" class="Keyword">import</a> <a id="1937" href="Model.Prop.Product.html" class="Module">Model.Prop.Product</a>
+</pre></body></html>
